@@ -765,7 +765,10 @@ const DobraCutaneaForm: React.FC<DobraCutaneaFormProps> = ({ dobraInicial, onSub
                             <div key={field.key}>
                                 <label htmlFor={`dobra-${field.key}`} className="block text-xs font-medium text-slate-400 mb-0.5">{field.label}</label>
                                 <input id={`dobra-${field.key}`} name={field.key as string} value={formData[field.key] || ''} {...inputDobraProps} />
-              </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             ))}
 
 
