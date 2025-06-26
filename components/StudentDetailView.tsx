@@ -765,11 +765,9 @@ const DobraCutaneaForm: React.FC<DobraCutaneaFormProps> = ({ dobraInicial, onSub
                             <div key={field.key}>
                                 <label htmlFor={`dobra-${field.key}`} className="block text-xs font-medium text-slate-400 mb-0.5">{field.label}</label>
                                 <input id={`dobra-${field.key}`} name={field.key as string} value={formData[field.key] || ''} {...inputDobraProps} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+              </div>
             ))}
+
 
             <div>
                 <label htmlFor="dobraObservacoes" className="block text-sm font-medium text-slate-300 mb-1">Observações</label>
@@ -1628,9 +1626,11 @@ const StudentDetailView: React.FC<StudentDetailViewProps> = ({
                         );
                     })}
                 </div>
-              ) : <p className="text-xs text-slate-400 italic pl-2">Nenhum exercício neste plano.</p>
+              ) : (
+                <p className="text-xs text-slate-400 italic pl-2">Nenhum exercício neste plano.</p>
+              )}
             </div>
-          ))}
+          ))
           </>
         )}
     </div>
